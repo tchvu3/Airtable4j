@@ -10,6 +10,8 @@
 
 # Airtable4j - Java based Airtable API
 
+> :warning: **This project is under active development, while the API is stable some bugs might still be present.**
+
 This library has been designed to be as simple and intuitive as possible to use.
 
 most of the usage can be inferred by auto-completing your way though the API.
