@@ -11,8 +11,8 @@
     </properties>
 
     <groupId>com.avihu-harush</groupId>
-    <artifactId>airtable-api</artifactId>
-    <version>3.0.0</version>
+    <artifactId>airtable4j</artifactId>
+    <version>3.1.0</version>
 
     <packaging>jar</packaging>
     <name>Airtable4j</name>
@@ -30,7 +30,7 @@
         <developer>
             <id>tchvu3</id>
             <name>Avihu Harush</name>
-            <email>tchvu3@gmail.com</email>
+            <email>avihu@harush.email</email>
         </developer>
     </developers>
 
@@ -126,5 +126,17 @@
             </build>
         </profile>
     </profiles>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org</url>
+        </repository>
+    </distributionManagement>
+
 
 </project>
