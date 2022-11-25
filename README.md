@@ -19,12 +19,16 @@ most of the usage can be inferred by auto-completing your way though the API.
 ## Install
 add the following dependency to your maven project:
 ```
-COMING SOON!
+<dependency>
+    <groupId>com.avihu-harush</groupId>
+    <artifactId>airtable4j</artifactId>
+    <version>3.1.1</version>
+</dependency>
 ```
 
 or to your gradle project:
 ```
-COMING SOON!
+implementation 'com.avihu-harush:airtable4j:3.1.1'
 ```
 
 ## Usage
