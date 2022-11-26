@@ -5,6 +5,8 @@
 > :warning: **This project is under active development, while the API is stable some bugs might still be present.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![TESTING](https://rare-bats-teach-5-29-19-170.loca.lt/v2/ticketing/testing)](https://rare-bats-teach-5-29-19-170.loca.lt/v2/ticketing/testing)
+
 [![Repo Size](https://img.shields.io/github/repo-size/tchvu3/Airtable4j)](https://img.shields.io/github/repo-size/tchvu3/Airtable4j)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftchvu3%2FAirtable4j.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftchvu3%2FAirtable4j?ref=badge_shield)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0a94e3d6a749415cb7feb9826cef0ae0)](https://www.codacy.com/gh/tchvu3/Airtable4j/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tchvu3/Airtable4j&amp;utm_campaign=Badge_Grade)
