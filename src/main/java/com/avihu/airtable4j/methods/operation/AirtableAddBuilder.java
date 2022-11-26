@@ -2,11 +2,11 @@ package com.avihu.airtable4j.methods.operation;
 
 import com.avihu.airtable4j.Airtable;
 import com.avihu.airtable4j.exception.AirtableException;
-import com.avihu.airtable4j.methods.base.AirtableRequestBuilder;
 import com.avihu.airtable4j.methods.annotation.AirtableBuilderPath;
+import com.avihu.airtable4j.methods.base.AirtableRequestBuilder;
 import com.avihu.airtable4j.model.add.external.AirtableAddResponse;
-import com.avihu.airtable4j.model.add.internal.output.AirtableAddPayload;
 import com.avihu.airtable4j.model.add.internal.input.AirtableInitialAddResponse;
+import com.avihu.airtable4j.model.add.internal.output.AirtableAddPayload;
 import kong.unirest.HttpMethod;
 
 import java.util.Arrays;

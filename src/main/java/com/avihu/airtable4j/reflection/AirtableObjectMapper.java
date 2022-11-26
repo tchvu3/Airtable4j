@@ -11,7 +11,6 @@ import com.avihu.airtable4j.utils.ReflectionUtils;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 
 public abstract class AirtableObjectMapper {
 

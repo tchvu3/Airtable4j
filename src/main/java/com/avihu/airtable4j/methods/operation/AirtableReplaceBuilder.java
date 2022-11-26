@@ -2,8 +2,8 @@ package com.avihu.airtable4j.methods.operation;
 
 import com.avihu.airtable4j.Airtable;
 import com.avihu.airtable4j.exception.AirtableException;
-import com.avihu.airtable4j.methods.base.AirtableRequestBuilder;
 import com.avihu.airtable4j.methods.annotation.AirtableBuilderPath;
+import com.avihu.airtable4j.methods.base.AirtableRequestBuilder;
 import com.avihu.airtable4j.model.generic.AirtableMappedObject;
 import com.avihu.airtable4j.model.replace.external.AirtableRecordReplaceResponse;
 import com.avihu.airtable4j.model.replace.external.AirtableReplaceResponse;

@@ -2,11 +2,11 @@ package com.avihu.airtable4j.methods.operation;
 
 import com.avihu.airtable4j.Airtable;
 import com.avihu.airtable4j.exception.AirtableException;
-import com.avihu.airtable4j.methods.base.AirtableRequestBuilderWithClass;
-import com.avihu.airtable4j.methods.extra.AirtableSortField;
 import com.avihu.airtable4j.methods.annotation.AirtableBuilderPath;
 import com.avihu.airtable4j.methods.annotation.AirtableBuilderQuery;
 import com.avihu.airtable4j.methods.annotation.AirtableBuilderQueryList;
+import com.avihu.airtable4j.methods.base.AirtableRequestBuilderWithClass;
+import com.avihu.airtable4j.methods.extra.AirtableSortField;
 import com.avihu.airtable4j.model.get.external.AirtableGetIterator;
 import com.avihu.airtable4j.model.get.external.AirtableGetResponse;
 import com.avihu.airtable4j.model.get.external.AirtableRecordGetResponse;

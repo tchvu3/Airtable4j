@@ -10,6 +10,7 @@ import java.lang.annotation.Target;
 public @interface AirtableBuilderQueryList {
 
     String value();
+
     boolean required() default false;
 
 }

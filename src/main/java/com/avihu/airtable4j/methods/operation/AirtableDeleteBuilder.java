@@ -2,9 +2,9 @@ package com.avihu.airtable4j.methods.operation;
 
 import com.avihu.airtable4j.Airtable;
 import com.avihu.airtable4j.exception.AirtableException;
-import com.avihu.airtable4j.methods.base.AirtableRequestBuilder;
 import com.avihu.airtable4j.methods.annotation.AirtableBuilderPath;
 import com.avihu.airtable4j.methods.annotation.AirtableBuilderQueryList;
+import com.avihu.airtable4j.methods.base.AirtableRequestBuilder;
 import com.avihu.airtable4j.model.delete.external.AirtableDeleteResponse;
 import com.avihu.airtable4j.model.delete.external.AirtableRecordDeleteResponse;
 import com.avihu.airtable4j.model.delete.internal.AirtableInitialDeleteResponse;
