@@ -5,8 +5,8 @@ import com.avihu.airtable4j.methods.annotation.AirtableBuilderPath;
 import com.avihu.airtable4j.methods.annotation.AirtableBuilderQuery;
 import com.avihu.airtable4j.methods.annotation.AirtableBuilderQueryList;
 import com.avihu.airtable4j.methods.base.AirtableRequestBuilder;
-import com.avihu.airtable4j.utils.AirtableGenericUtils;
 import com.avihu.airtable4j.utils.AirtableTypingUtils;
+import com.avihu.airtable4j.utils.ReflectionUtils;
 
 import java.lang.reflect.Field;
 import java.util.*;
@@ -79,7 +79,7 @@ public class UrlParts {
 
 
     private Object getFieldValue(Field field) {
-        return AirtableGenericUtils.getFieldValue(field, this.airtableRequestBuilderRef);
+        return ReflectionUtils.getDeclaredFieldValueFromObject(this.airtableRequestBuilderRef, field);
     }
 
 }

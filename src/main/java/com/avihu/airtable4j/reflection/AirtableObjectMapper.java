@@ -7,9 +7,11 @@ import com.avihu.airtable4j.exception.AirtableException;
 import com.avihu.airtable4j.model.generic.AirtableMappedObject;
 import com.avihu.airtable4j.model.get.external.AirtableRecordGetFieldResponse;
 import com.avihu.airtable4j.model.get.external.AirtableRecordGetResponse;
+import com.avihu.airtable4j.utils.ReflectionUtils;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 
 public abstract class AirtableObjectMapper {
 
@@ -20,9 +22,9 @@ public abstract class AirtableObjectMapper {
             Field[] fields = toClass.getDeclaredFields();
             for (Field field : fields) {
                 if (field.isAnnotationPresent(AirtableRowId.class)) {
-                    AirtableObjectMapper.setFieldForObjectInstance(instance, field, record.getId());
+                    ReflectionUtils.setFieldValueOfObject(instance, field, record.getId());
                 } else if (field.isAnnotationPresent(AirtableRowCreatedTime.class)) {
-                    AirtableObjectMapper.setFieldForObjectInstance(instance, field, record.getCreatedTime());
+                    ReflectionUtils.setFieldValueOfObject(instance, field, record.getCreatedTime());
                 } else if (field.isAnnotationPresent(AirtableField.class)) {
                     injectAirtableField(record, instance, field);
                 } else {
@@ -44,7 +46,7 @@ public abstract class AirtableObjectMapper {
             AirtableMappedObject toReturn = new AirtableMappedObject();
             Field[] fields = object.getClass().getDeclaredFields();
             for (Field field : fields) {
-                Object value = AirtableObjectMapper.getFieldValueFromObjectInstance(object, field);
+                Object value = ReflectionUtils.getParsedFieldValueFromObject(object, field);
                 if (ignoreNull && value == null) {
                     continue;
                 }
@@ -65,36 +67,18 @@ public abstract class AirtableObjectMapper {
         }
     }
 
-    private static <T> void injectAirtableField(AirtableRecordGetResponse record, T instance, Field field) throws IllegalAccessException {
+    private static <T> void injectAirtableField(AirtableRecordGetResponse record, T instance, Field field) {
         AirtableField annotation = field.getAnnotation(AirtableField.class);
         AirtableRecordGetFieldResponse<?> recordField = record.getField(annotation.value());
         if (recordField != null) {
-            AirtableObjectMapper.setFieldForObjectInstance(instance, field, recordField.getValue());
+            ReflectionUtils.setFieldValueOfObject(instance, field, recordField.getValue());
         }
     }
 
-    private static <T> void injectGenericField(AirtableRecordGetResponse record, T instance, Field field) throws IllegalAccessException {
+    private static <T> void injectGenericField(AirtableRecordGetResponse record, T instance, Field field) {
         AirtableRecordGetFieldResponse<?> recordField = record.getField(field.getName());
         if (recordField != null) {
-            AirtableObjectMapper.setFieldForObjectInstance(instance, field, recordField.getValue());
-        }
-    }
-
-    private static <T> void setFieldForObjectInstance(T instance, Field field, Object value) throws IllegalAccessException {
-        try {
-            field.setAccessible(true);
-            field.set(instance, value);
-        } finally {
-            field.setAccessible(false);
-        }
-    }
-
-    private static <T, V> V getFieldValueFromObjectInstance(T instance, Field field) throws IllegalAccessException {
-        try {
-            field.setAccessible(true);
-            return (V) field.get(instance);
-        } finally {
-            field.setAccessible(false);
+            ReflectionUtils.setFieldValueOfObject(instance, field, recordField.getValue());
         }
     }
 

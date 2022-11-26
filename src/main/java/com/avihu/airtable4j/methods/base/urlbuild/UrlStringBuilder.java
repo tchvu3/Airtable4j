@@ -1,7 +1,7 @@
 package com.avihu.airtable4j.methods.base.urlbuild;
 
-import com.avihu.airtable4j.utils.AirtableGenericUtils;
 import com.avihu.airtable4j.utils.AirtableTypingUtils;
+import com.avihu.airtable4j.utils.ReflectionUtils;
 import com.google.common.net.UrlEscapers;
 
 import java.lang.reflect.Field;
@@ -50,7 +50,7 @@ public class UrlStringBuilder {
                             .append(this.encodedLeftBrace).append(i).append(this.encodedRightBrace)
                             .append(this.encodedLeftBrace).append(field.getName()).append(this.encodedRightBrace)
                             .append("=")
-                            .append(AirtableGenericUtils.getFieldValue(field, obj))
+                            .append(ReflectionUtils.getFieldValueFromObject(obj, field))
                             .append("&");
                 }
             }

@@ -12,15 +12,4 @@ public abstract class AirtableGenericUtils {
         return matcher.find();
     }
 
-    public static Object getFieldValue(Field field, Object object) {
-        try {
-            field.setAccessible(true);
-            return field.get(object);
-        } catch (Exception ignore) {
-            return null;
-        } finally {
-            field.setAccessible(false);
-        }
-    }
-
 }

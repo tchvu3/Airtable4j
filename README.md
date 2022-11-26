@@ -5,10 +5,9 @@
 > :warning: **This project is under active development, while the API is stable some bugs might still be present.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
-![Repo Size](https://img.shields.io/github/repo-size/tchvu3/Airtable4j)
+[![Repo Size](https://img.shields.io/github/repo-size/tchvu3/Airtable4j)](https://img.shields.io/github/repo-size/tchvu3/Airtable4j)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftchvu3%2FAirtable4j.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftchvu3%2FAirtable4j?ref=badge_shield)
-
-[//]: # ([![Downloads]&#40;https://pepy.tech/badge/global-chem&#41;]&#40;https://pepy.tech/project/global-chem&#41;)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0a94e3d6a749415cb7feb9826cef0ae0)](https://www.codacy.com/gh/tchvu3/Airtable4j/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tchvu3/Airtable4j&amp;utm_campaign=Badge_Grade)
 
 # Airtable4j - Java based Airtable API
 
@@ -22,18 +21,18 @@ add the following dependency to your maven project:
 <dependency>
     <groupId>com.avihu-harush</groupId>
     <artifactId>airtable4j</artifactId>
-    <version>3.1.1</version>
+    <version>3.1.3</version>
 </dependency>
 ```
 
 or to your gradle project:
 ```
-implementation 'com.avihu-harush:airtable4j:3.1.1'
+implementation 'com.avihu-harush:airtable4j:3.1.3'
 ```
 
 ## Usage
 
-### Getting an instance of Airtable:
+### Getting an instance of Airtable
 
 #### pointing to specific table in a specific database
 ```
