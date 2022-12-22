@@ -1,5 +1,6 @@
 package com.avihu.airtable4j;
 
+import com.avihu.airtable4j.annotation.AirtableField;
 import com.avihu.airtable4j.exception.AirtableException;
 import com.avihu.airtable4j.exception.AirtableRuntimeException;
 import com.avihu.airtable4j.methods.base.AirtableRequestBuilder;
