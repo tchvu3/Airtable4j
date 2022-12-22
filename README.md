@@ -21,14 +21,14 @@ add the following dependency to your maven project:
 <dependency>
     <groupId>com.avihu-harush</groupId>
     <artifactId>airtable4j</artifactId>
-    <version>3.1.3</version>
+    <version>3.1.5</version>
 </dependency>
 ```
 
 or to your gradle project:
 
 ```
-implementation 'com.avihu-harush:airtable4j:3.1.3'
+implementation 'com.avihu-harush:airtable4j:3.1.5'
 ```
 
 ## Usage
